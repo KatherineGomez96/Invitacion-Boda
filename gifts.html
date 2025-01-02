@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Regalos</title>
+        <link rel="stylesheet" href="assets/css/styles.css">
+    </head>
+    <body>
+        <header>
+            <h1>Detalles del Regalo</h1>
+        </header>
+
+        <section>
+            <p>CBU: <strong>12345678901234567890</strong></p>
+            <button onclick="copyCBU()">Copiar CBU</button>
+        </section>
+
+        <footer>
+            <a href="index.html">Volver al inicio</a>
+        </footer>
+
+        <script>
+            function copyCBU() {
+                navigator.clipboard.writeText('12345678901234567890');
+                alert('CBU copiado al portapapeles');
+            }
+        </script>
+    </body>
+</html>
