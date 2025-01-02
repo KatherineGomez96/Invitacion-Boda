@@ -1,0 +1,51 @@
+/* assets/css/styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fef9f9;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(90deg, #ff9a9e, #fad0c4);
+}
+
+#countdown, #gallery, #map, #playlist {
+    padding: 20px;
+    text-align: center;
+}
+
+.photo-gallery img {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.photo-gallery img:hover {
+    transform: scale(1.1);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #ff6f61;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #e65550;
+}
