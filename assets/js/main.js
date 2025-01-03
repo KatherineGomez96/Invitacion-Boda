@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const minutes = Math.floor((timeLeft / (1000 * 60)) % 60);
         const seconds = Math.floor((timeLeft / 1000) % 60);
 
-        timer.textContent = `${days} días, ${hours} horas, ${minutes} minutos, ${seconds} segundos`;
+        timer.textContent = `${days} días | ${hours} horas | ${minutes} minutos | ${seconds} segundos`;
     }
 
     setInterval(updateCountdown, 1000);

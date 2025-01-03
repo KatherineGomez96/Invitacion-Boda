@@ -1,9 +1,9 @@
 /* Estilos generales */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Amoresa Aged', serif;
     margin: 0;
     padding: 0;
-    background-color: #fef9f9;
+    background-color: #FAF3E0; /* Fondo general */
     color: #333;
     line-height: 1.6;
 }
@@ -11,17 +11,18 @@ body {
 header {
     text-align: center;
     padding: 40px 20px;
-    background: linear-gradient(90deg, #ff9a9e, #fad0c4);
-    color: white;
+    background: #FAF3E0; /* Fondo general */
+    color: #808000; /* Verde Oliva */
+    font-family: 'Amoresa Aged', serif;
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 8rem; /* Tamaño de fuente aumentado */
     margin: 0;
 }
 
 header p {
-    font-size: 1.2rem;
+    font-size: 4rem; /* Tamaño de fuente aumentado */
     margin: 10px 0 0;
 }
 
@@ -33,6 +34,7 @@ section {
 h2 {
     font-size: 2rem;
     margin-bottom: 20px;
+    color: #808000; /* Verde Oliva */
 }
 
 footer {
@@ -44,14 +46,13 @@ footer {
 }
 
 footer a {
-    color: #ff6f61;
+    color: #F4C2C2; /* Rosa Pastel */
     text-decoration: none;
 }
 
 footer a:hover {
     text-decoration: underline;
 }
-
 
 .photo-gallery img {
     width: 150px;
@@ -81,32 +82,47 @@ nav {
     margin: 20px 0;
 }
 
-nav a {
+.nav-button {
+    display: flex;
+    align-items: center;
     text-decoration: none;
-    padding: 10px 15px;
-    background-color: #ff6f61;
-    color: white;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-nav a:hover {
-    background-color: #e65550;
-}
-
-/* Botones y formularios */
-button {
     padding: 10px 20px;
-    background-color: #ff6f61;
+    background-color: #808000; /* Verde Oliva */
     color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    border-radius: 25px; /* Forma de botón */
+    transition: background-color 0.3s, transform 0.3s;
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
 }
 
-button:hover {
-    background-color: #e65550;
+.nav-button i {
+    margin-right: 10px; /* Espacio entre el icono y el texto */
+}
+
+.nav-button:hover {
+    background-color: #414105; /* Verde Oliva oscuro*/
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-button {
+        padding: 10px;
+        justify-content: center;
+        width: auto; /* Ajusta el ancho automáticamente */
+    }
+
+    .nav-button span {
+        display: none;
+    }
+
+    .nav-button i {
+        margin-right: 0;
+    }
 }
 
 input[type="text"], input[type="email"] {
@@ -123,10 +139,11 @@ form {
     flex-direction: column;
     align-items: center;
 }
+
 /* Responsive design */
 @media (max-width: 768px) {
-    header h1 { font-size: 2rem; }
-    header p { font-size: 1rem; }
+    header h1 { font-size: 6rem; }
+    header p { font-size: 3rem; }
     h2 { font-size: 1.5rem; }
     .photo-gallery img { width: 100px; height: 100px; }
     nav { flex-direction: column; gap: 10px; }
@@ -135,13 +152,12 @@ form {
 }
 
 @media (max-width: 480px) {
-    header h1 { font-size: 1.5rem; }
-    header p { font-size: 0.9rem; }
+    header h1 { font-size: 4rem; }
+    header p { font-size: 2rem; }
     h2 { font-size: 1.2rem; }
     .photo-gallery img { width: 80px; height: 80px; }
     iframe { height: 150px; }
 }
-
 
 /* Contenedor del carrusel y controles */
 .carousel-container {
@@ -216,4 +232,45 @@ form {
         padding: 10px;
         font-size: 1.2rem;
     }
+}
+.agendar-button {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 8px 16px; /* Ajusta el padding */
+    background-color: #808000; /* Verde Oliva */
+    color: white;
+    border-radius: 20px; /* Forma de botón */
+    transition: background-color 0.3s, transform 0.3s;
+    font-family: 'Arial', sans-serif;
+    font-size: 0.9rem; /* Tamaño de fuente reducido */
+}
+
+.agendar-button i {
+    margin-right: 8px; /* Espacio entre el icono y el texto */
+}
+
+.agendar-button:hover {
+    background-color: #414105; /* Verde Oliva oscuro*/
+    transform: scale(1.05);
+}
+
+/* Ocultar el texto en dispositivos móviles */
+@media (max-width: 768px) {
+    .agendar-button span {
+        display: none;
+    }
+
+    .agendar-button i {
+        margin-right: 0; /* Elimina el margen derecho en móviles */
+    }
+}
+
+.invitado img[src="assets/images/invitacion.png"] {
+    border-radius: 20px; /* Borde redondeado */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra */
+    background-image: linear-gradient(to bottom, #808000, #414105); /* Degradado */
+    opacity: 0.8; /* Opacidad */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2); /* Borde difuminado */
+
 }
