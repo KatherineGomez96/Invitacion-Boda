@@ -1,27 +1,61 @@
-/* assets/css/styles.css */
+/* Estilos generales */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #fef9f9;
     color: #333;
+    line-height: 1.6;
 }
 
 header {
     text-align: center;
-    padding: 20px;
+    padding: 40px 20px;
     background: linear-gradient(90deg, #ff9a9e, #fad0c4);
+    color: white;
 }
 
-#countdown, #gallery, #map, #playlist {
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin: 10px 0 0;
+}
+
+section {
     padding: 20px;
     text-align: center;
 }
 
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #ff6f61;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
 .photo-gallery img {
-    width: 100px;
-    height: 100px;
-    margin: 10px;
+    width: 150px;
+    height: 150px;
     border-radius: 10px;
     transition: transform 0.3s;
 }
@@ -30,6 +64,16 @@ header {
     transform: scale(1.1);
 }
 
+/* Mapa */
+iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    border: 0;
+    border-radius: 10px;
+}
+
+/* Navegación */
 nav {
     display: flex;
     justify-content: center;
@@ -48,4 +92,128 @@ nav a {
 
 nav a:hover {
     background-color: #e65550;
+}
+
+/* Botones y formularios */
+button {
+    padding: 10px 20px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e65550;
+}
+
+input[type="text"], input[type="email"] {
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Responsive design */
+@media (max-width: 768px) {
+    header h1 { font-size: 2rem; }
+    header p { font-size: 1rem; }
+    h2 { font-size: 1.5rem; }
+    .photo-gallery img { width: 100px; height: 100px; }
+    nav { flex-direction: column; gap: 10px; }
+    nav a { width: 100%; text-align: center; }
+    iframe { height: 200px; }
+}
+
+@media (max-width: 480px) {
+    header h1 { font-size: 1.5rem; }
+    header p { font-size: 0.9rem; }
+    h2 { font-size: 1.2rem; }
+    .photo-gallery img { width: 80px; height: 80px; }
+    iframe { height: 150px; }
+}
+
+
+/* Contenedor del carrusel y controles */
+.carousel-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espacio entre los controles y el carrusel */
+}
+
+/* Estilos del carrusel */
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Controles del carrusel */
+.carousel-control {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.carousel-control:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transform: scale(1.1);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .carousel-container {
+        max-width: 90%;
+    }
+
+    .carousel-item img {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-item img {
+        height: 200px;
+    }
+
+    .carousel-control {
+        padding: 10px;
+        font-size: 1.2rem;
+    }
 }

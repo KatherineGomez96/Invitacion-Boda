@@ -1,7 +1,7 @@
 // Contador regresivo
 document.addEventListener('DOMContentLoaded', () => {
     const timer = document.getElementById('timer');
-    const eventDate = new Date('YYYY-MM-DDTHH:MM:SS');
+    const eventDate = new Date('2025-11-22T21:00:00');
 
     function updateCountdown() {
         const now = new Date();
@@ -23,3 +23,21 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(updateCountdown, 1000);
     updateCountdown();
 });
+let currentIndex = 0;
+
+function moveSlide(direction) {
+    const carouselInner = document.querySelector('.carousel-inner');
+    const items = document.querySelectorAll('.carousel-item');
+    const totalItems = items.length;
+
+    currentIndex += direction;
+
+    if (currentIndex < 0) {
+        currentIndex = totalItems - 1;
+    } else if (currentIndex >= totalItems) {
+        currentIndex = 0;
+    }
+
+    const offset = -currentIndex * 100;
+    carouselInner.style.transform = `translateX(${offset}%)`;
+}

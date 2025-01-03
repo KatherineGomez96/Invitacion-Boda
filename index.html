@@ -9,7 +9,7 @@
     <body>
         <header>
             <h1>¡Nos Casamos!</h1>
-            <p>Acompáñanos el <strong>[Fecha del Evento]</strong></p>
+            <p>Acompáñanos el <strong>22 de Noviembre de 2024</strong></p>
         </header>
 
         <!-- Contador regresivo -->
@@ -21,10 +21,33 @@
         <!-- Galería de fotos -->
         <section id="gallery">
             <h2>Nuestra Historia</h2>
-            <div class="gallery">
-                <img src="assets/images/photo1.jpg" alt="Foto 1">
-                <img src="assets/images/photo2.jpg" alt="Foto 2">
-                <img src="assets/images/photo3.jpg" alt="Foto 3">
+            <div class="carousel-container">
+                <!-- Controles fuera del carrusel -->
+                <button class="carousel-control prev" onclick="moveSlide(-1)">&#10094;</button>
+                <div class="carousel">
+                    <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/images/photo1.jpg" alt="Foto 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/photo2.jpg" alt="Foto 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/photo3.jpg" alt="Foto 3">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/photo4.jpg" alt="Foto 4">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/photo5.jpg" alt="Foto 5">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/photo6.jpg" alt="Foto 6">
+                    </div>
+                </div>
+                <!-- Controles del carrusel -->
+                <button class="carousel-control prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="carousel-control next" onclick="moveSlide(1)">&#10095;</button>
             </div>
         </section>
 
@@ -32,15 +55,14 @@
         <section id="map">
             <h2>Ubicación</h2>
             <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509437!2d144.96315781532094!3d-37.813627979751606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xb2c8b96f3f1c64b1!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1637110389782!5m2!1sen!2sau" 
-                width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3276.7893616445485!2d-58.30613362513585!3d-34.78607766715039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32d329bd43a01%3A0xccf69b483f43f792!2sQuinta%20Mujercitas!5e0!3m2!1ses-419!2sar!4v1735860689997!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </section>
 
         <!-- Playlist interactiva -->
         <section id="playlist">
             <h2>Escucha nuestra playlist</h2>
-            <a href="https://open.spotify.com/playlist/..." target="_blank">Abrir Playlist</a>
+            <a href="https://open.spotify.com/intl-es/album/0WwMFBgiGGeFqO32NB4znf" target="_blank">Abrir Playlist</a>
         </section>
 
         <!-- Navegación -->
