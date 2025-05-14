@@ -57,6 +57,6 @@ Spotify: Playlist interactiva.
 Clona este repositorio:
 bash
 Copiar código
-git clone https://github.com/tu-usuario/wedding-invitation.git
+git clone https://github.com/KatherineGomez96/wedding-invitation.git
 cd wedding-invitation
 Abre index.html en tu navegador para ver la página principal.
